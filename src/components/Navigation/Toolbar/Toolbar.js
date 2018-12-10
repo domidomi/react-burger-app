@@ -7,8 +7,10 @@ const toolbar = () => {
     return (
         <header className={classes.Toolbar}>
             <button>MENU</button>
-            <Logo />
-            <nav>
+            <div className={classes.Logo}>
+                <Logo />
+            </div>
+            <nav className={classes.DesktopOnly}>
                 <NavigationItems></NavigationItems>
             </nav>
         </header>
