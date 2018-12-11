@@ -3,15 +3,15 @@ import React from 'react'
 import Auxi from '../../../hoc/Auxi';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
+const orderSummary = ( props ) => {
     const ingredientsList = Object.keys(props.ingredients)
-        .map(ingKey => {
-            return (
-                <li key={ingKey}>
-                    <span style={{ textTransform: 'capitalize' }}>{ingKey}</span>: {props.ingredients[ingKey]}
-                </li>
-            );
-        })
+    .map(ingKey => {
+        return (
+            <li key={ingKey}>
+                <span style={{ textTransform: 'capitalize' }}>{ingKey}</span>: {props.ingredients[ingKey]}
+            </li>
+        );
+    })
 
     return (
         <Auxi>
@@ -26,6 +26,7 @@ const orderSummary = (props) => {
             <Button btnType="Success" clicked={props.purchaseContinued}>Continue</Button>
         </Auxi>
     )
+
 }
 
 export default orderSummary;
